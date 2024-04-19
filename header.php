@@ -22,6 +22,7 @@
                     <div class="container-fluid">
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">
                             <ul class="navbar-nav">
+<<<<<<< HEAD
                                 <?php
                                     foreach($menu as $content) 
                                     {?>
@@ -49,6 +50,40 @@
                                 <?php   }?>
                                         </li> 
                             <?php   }?>
+=======
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Nos Services
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="deratisation.php">Deratisation</a></li>
+                                        <li><a class="dropdown-item" href="desinsectisation.php">Desinsectisation</a></li>
+                                        <li><a class="dropdown-item" href="desinfection.php">Desinfection</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Les nuisibles
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="insectes_rampants.php">insectes rampants</a></li>
+                                        <li><a class="dropdown-item" href="insectes_volants.php">insectes volants</a></li>
+                                        <li><a class="dropdown-item" href="insectes_xylophages.php">insectes xylophages</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.php">Nous contacter</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="devis.php">Devis</a>
+                                </li>
+
+>>>>>>> cea646f (update header)
                             </ul>
                         </div>
                     </div>
