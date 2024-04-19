@@ -22,9 +22,12 @@
                     <div class="container-fluid">
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">
                             <ul class="navbar-nav">
+                                <?php
+                                    foreach($mainMenu as $key => $value) {?>
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
                                 </li>
+                                <?php };?>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                         aria-expanded="false">
