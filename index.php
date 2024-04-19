@@ -27,7 +27,7 @@
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                                 card's
                                 content.</p>
-                            <a href="#" class="btn btn-primary">En savoir plus</a>
+                            <a href="deratisation.php" class="btn btn-primary">En savoir plus</a>
                         </div>
                     </div>
                 </div>
@@ -40,7 +40,7 @@
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                                 card's
                                 content.</p>
-                            <a href="#" class="btn btn-primary">En savoir plus</a>
+                            <a href="desinsectisation.php" class="btn btn-primary">En savoir plus</a>
                         </div>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                                 card's
                                 content.</p>
-                            <a href="#" class="btn btn-primary">En savoir plus</a>
+                            <a href="desinfection.php" class="btn btn-primary">En savoir plus</a>
                         </div>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                                 card's
                                 content.</p>
-                            <a href="#" class="btn btn-primary">En savoir plus</a>
+                            <a href="insectes_rampants.php" class="btn btn-primary">En savoir plus</a>
                         </div>
                     </div>
                 </div>
@@ -87,7 +87,7 @@
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                                 card's
                                 content.</p>
-                            <a href="#" class="btn btn-primary">En savoir plus</a>
+                            <a href="insectes_volants.php" class="btn btn-primary">En savoir plus</a>
                         </div>
                     </div>
                 </div>
@@ -100,7 +100,7 @@
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                                 card's
                                 content.</p>
-                            <a href="#" class="btn btn-primary">En savoir plus</a>
+                            <a href="insectes_xylophages.php" class="btn btn-primary">En savoir plus</a>
                         </div>
                     </div>
                 </div>
