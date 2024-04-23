@@ -36,16 +36,11 @@
                                                         <ul class="dropdown-menu">
                                                        <?php foreach($content['item'] as $subContent)
                                                         {?>
-                                                            <!-- <li class="nav-item dropdown"> -->
-                                                                
-                                                                
-                                                                    <!-- <li> -->
+                                                         
                                                                         <a class="dropdown-item" href="<?= $subContent['url']; ?>.php">
                                                                             <?= $subContent['name']; ?>
                                                                         </a>
-                                                                    <!-- </li> -->
-                                                               <!--  
-                                                            </li> -->
+                                                           
                                                 <?php   }?>
                                                         </ul>   
                                             <?php  }
