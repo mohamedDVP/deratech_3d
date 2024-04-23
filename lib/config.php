@@ -1,30 +1,52 @@
 <?php
 
-  $mainMenu = [
-    ['name' => "Accueil", 'url' => "index.php"],
-    ['name' => "Services", 'url' =>"services.php", 
-        'item1' => [
-            'name' => 'La dératisation', 'url' =>'deratisation.php'
-        ], 
-            'item2' =>[
-            'name' => 'La désinsectisation', 'url' => 'desinsectisation.php'
-        ], 
-            'item3' =>[
-            'name' => 'La désinfection', 'url' => 'desinfection.php'
-        ]
+  $menu = [
+    [
+        "name" => "Accueil",
+        "url" => "index",
     ],
-
-    ['name' => "Nuisibles", 'url' =>"insectes.php", 
-        'item1' => [
-            'name' => 'Rampants', 'url' =>'insectes_rampants.php'
-        ],
-        'item2' =>[
-            'name' => 'Volants', 'url' => 'insectes_rampants.php'
-        ],
-        'item3' =>[
-        'name' => 'Xylophages', 'url' =>'insectes_xylophages.php'
+    [
+        "name" => "Services",
+        "url" => "services",
+        "item" => [
+            [
+                "name" => "La deratisation",
+                "url" => "deratisation",
+            ],
+            [
+                "name" => "La desinsectisation",
+                "url" => "desinsectisation",
+            ],
+            [
+                "name" => "La desinfection",
+                "url" => "desinfection",
+            ],
         ],
     ],
-    ['name' => "Contact", 'url' =>"contact.php"],
-    ['name' => "Devis", 'url' => "devis.php"],
-  ];
+    [
+        "name" => "Nuisibles",
+        "url" => "insectes",
+        "item" => [
+            [
+                "name" => "Rampants",
+                "url" => "insectes_rampants",
+            ],
+            [
+                "name" => "Volants",
+                "url" => "insectes_volants",
+            ],
+            [
+                "name" => "Xylophages",
+                "url" => "insectes_xylophages",
+            ],
+        ],
+    ],
+    [
+        "name" => "Contact",
+        "url" => "contact",
+    ],
+    [
+        "name" => "Devis",
+        "url" => "devis",
+    ],
+];
