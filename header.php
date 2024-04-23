@@ -21,24 +21,53 @@
                 <nav class="navbar navbar-expand-lg bg-body-tertiary">
                     <div class="container-fluid">
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                            <ul class="navbar-nav">
-                                <?php
-                                    foreach($mainMenu as $key => $value) {?>
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
-                                </li>
-                                <?php };?>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        Nos Services
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="deratisation.php">Deratisation</a></li>
-                                        <li><a class="dropdown-item" href="desinsectisation.php">Desinsectisation</a></li>
-                                        <li><a class="dropdown-item" href="desinfection.php">Desinfection</a></li>
-                                    </ul>
-                                </li>
+                               
+                                        <ul class="navbar-nav">
+                                             <?php
+                                                foreach($menu as $content) 
+                                                {?>
+                                                    <li class="nav-item">
+
+                                                    <?php if(isset($content['item']) && is_array($content['item']))
+                                                    {?>
+                                                        <a class="nav-link dropdown-toggle" href="<?= $content['url']; ?>.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <?= $content['name'];?>
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                       <?php foreach($content['item'] as $subContent)
+                                                        {?>
+                                                            <!-- <li class="nav-item dropdown"> -->
+                                                                
+                                                                
+                                                                    <!-- <li> -->
+                                                                        <a class="dropdown-item" href="<?= $subContent['url']; ?>.php">
+                                                                            <?= $subContent['name']; ?>
+                                                                        </a>
+                                                                    <!-- </li> -->
+                                                               <!--  
+                                                            </li> -->
+                                                <?php   }?>
+                                                        </ul>   
+                                            <?php  }
+                                                    else 
+                                                    {?>        
+                                                        
+                                                            <a class="nav-link active" aria-current="page" href="
+                                                            <?= $content['url'];?>.php">
+                                                                <?= $content['name'];?>
+                                                            </a>
+                                                        
+                                            <?php   }?>
+                                            </li> 
+                                        <?php   }?>    
+                                                
+                                                
+                                            
+                                            <!--<li><a class="dropdown-item" href="desinsectisation.php">Desinsectisation</a></li>
+                                            <li><a class="dropdown-item" href="desinfection.php">Desinfection</a></li>-->
+                                        <!--</ul>-->
+                                    
+                                    <!--
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                         aria-expanded="false">

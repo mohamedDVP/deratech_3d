@@ -1,6 +1,6 @@
 <?php
 
-  $menu = [
+    $menu = [
     [
         "name" => "Accueil",
         "url" => "index",
@@ -9,6 +9,10 @@
         "name" => "Services",
         "url" => "services",
         "item" => [
+            [
+                "name" => "Tous les services",
+                "url" => "services",
+            ],
             [
                 "name" => "La deratisation",
                 "url" => "deratisation",
@@ -27,6 +31,10 @@
         "name" => "Nuisibles",
         "url" => "insectes",
         "item" => [
+            [
+                "name" => "Tous les insectes",
+                "url" => "insectes",
+            ],
             [
                 "name" => "Rampants",
                 "url" => "insectes_rampants",
@@ -50,3 +58,68 @@
         "url" => "devis",
     ],
 ];
+
+
+/*$itemServices = 
+[
+    [
+        "name" => "Rampants",
+        "url" => "insectes_rampants"
+    ],
+    [
+        "name" => "Volants", 
+        "url" => "insectes_rampants"
+    ],
+    [
+        "name" => "Xylophages", 
+        "url" => "insectes_xylophages"
+    ],
+                
+            
+];
+
+$itemInsectes = 
+[
+    [
+        "name" => "Rampants",
+        "url" => "insectes_rampants"
+    ],
+    [
+        "name" => "Volants", 
+        "url" => "insectes_rampants"
+    ],
+    [
+        "name" => "Xylophages", 
+        "url" => "insectes_xylophages"
+    ],
+];
+
+
+
+
+$menuCategories = 
+[
+    [
+        "name" => "Accueil", 
+        "url" => "index"
+    ],
+    [
+        "name" => "Services", 
+        "url" => "services", 
+        "item" => array($itemServices),
+    ],    
+    [
+        "name" => "Nuisibles", 
+        "url" => "nuisibles", 
+        "item" => array($itemInsectes),
+    ],
+    [
+        
+        "name" => "Contact", 
+        "url" => "contact"
+    ],
+    [
+        "name" => "Devis", 
+        "url" => "devis"
+    ],
+];*/
