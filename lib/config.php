@@ -59,67 +59,44 @@
     ],
 ];
 
+    $indexCardsServices = [
+        [
+            'titre' => 'Deratisation',
+            'contenu' => "Some quick example text to build on the card title and make up the bulk of the card's content.",
+            'lien' => 'deratisation.php',
+            'image' => 'uploads/images/deratisation.jpg'
+        ],
+        [
+            'titre' => 'Desinsectisation',
+            'contenu' => "Some quick example text to build on the card title and make up the bulk of the card's content.",
+            'lien' => 'desinsectisation.php',
+            'image' => 'uploads/images/desinsectisation.jpg'
+        ],
+        [
+            'titre' => 'Desinfection',
+            'contenu' => "Some quick example text to build on the card title and make up the bulk of the card's content.",
+            'lien' => 'desinfection.php',
+            'image' => 'uploads/images/desinfection.jpg'
+        ],
+    ];
 
-/*$itemServices = 
-[
-    [
-        "name" => "Rampants",
-        "url" => "insectes_rampants"
-    ],
-    [
-        "name" => "Volants", 
-        "url" => "insectes_rampants"
-    ],
-    [
-        "name" => "Xylophages", 
-        "url" => "insectes_xylophages"
-    ],
-                
-            
-];
-
-$itemInsectes = 
-[
-    [
-        "name" => "Rampants",
-        "url" => "insectes_rampants"
-    ],
-    [
-        "name" => "Volants", 
-        "url" => "insectes_rampants"
-    ],
-    [
-        "name" => "Xylophages", 
-        "url" => "insectes_xylophages"
-    ],
-];
-
-
-
-
-$menuCategories = 
-[
-    [
-        "name" => "Accueil", 
-        "url" => "index"
-    ],
-    [
-        "name" => "Services", 
-        "url" => "services", 
-        "item" => array($itemServices),
-    ],    
-    [
-        "name" => "Nuisibles", 
-        "url" => "nuisibles", 
-        "item" => array($itemInsectes),
-    ],
-    [
-        
-        "name" => "Contact", 
-        "url" => "contact"
-    ],
-    [
-        "name" => "Devis", 
-        "url" => "devis"
-    ],
-];*/
+    $indexCardsInsectes = [
+        [
+            'titre' => 'Les insectes rampants',
+            'contenu' => "Some quick example text to build on the card title and make up the bulk of the card's content.",
+            'lien' => 'insectes_rampants.php',
+            'image' => 'uploads/images/rampants.jpeg'
+        ],
+        [
+            'titre' => 'Les insectes volants',
+            'contenu' => "Some quick example text to build on the card title and make up the bulk of the card's content.",
+            'lien' => 'insectes_volants.php',
+            'image' => 'uploads/images/volants.jpeg'
+        ],
+        [
+            'titre' => 'Les insectes xylophages',
+            'contenu' => "Some quick example text to build on the card title and make up the bulk of the card's content.",
+            'lien' => 'insectes_xylophages.php',
+            'image' => 'uploads/images/xylophages.jpeg'
+        ]
+    ];

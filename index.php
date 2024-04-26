@@ -19,44 +19,24 @@
         <div class="container col-xxl-8 px-4 py-5">
             <div class="row">
                 <h2>Nos services</h2>
+                <?php
+                                foreach($indexCardsServices as $indexCardService){
+                                ?>
                 <div class="col-md-4 my-2 d-flex">
+                    
                     <div class="card">
-                        <img src="uploads/images/deratisation.jpg" class="card-img-top" alt="...">
+                        
+                        <img src="<?= $indexCardService['image'];?>" class="card-img-top" alt="<?= $indexCardService['titre'] ;?>">
                         <div class="card-body">
-                            <h5 class="card-title">Deratisation</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                card's
-                                content.</p>
-                            <a href="deratisation.php" class="btn btn-primary">En savoir plus</a>
+                            <h5 class="card-title"><?= $indexCardService['titre'] ;?></h5>
+                            <p class="card-text"><?= $indexCardService['contenu'];?></p>
+                            <a href="<?= $indexCardService['lien'];?>" class="btn btn-primary">En savoir plus</a>
                         </div>
+                        
                     </div>
+                    
                 </div>
-
-                <div class="col-md-4 my-2 d-flex">
-                    <div class="card">
-                        <img src="uploads/images/desinsectisation.jpeg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Desinsectisation</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                card's
-                                content.</p>
-                            <a href="desinsectisation.php" class="btn btn-primary">En savoir plus</a>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="col-md-4 my-2 d-flex">
-                    <div class="card">
-                        <img src="uploads/images/desinfection.jpeg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Desinfection</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                card's
-                                content.</p>
-                            <a href="desinfection.php" class="btn btn-primary">En savoir plus</a>
-                        </div>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
 
             
@@ -66,44 +46,24 @@
         <div class="container col-xxl-8 px-4 py-5">
             <div class="row">
                 <h2>Les nuisibles</h2>
+                <?php
+                                foreach($indexCardsInsectes as $indexCardInsecte){
+                                ?>
                 <div class="col-md-4 my-2 d-flex">
+                    
                     <div class="card">
-                        <img src="uploads/images/rampants.jpeg" class="card-img-top" alt="...">
+                        
+                        <img src="<?= $indexCardInsecte['image'];?>" class="card-img-top" alt="<?= $indexCardInsecte['titre'] ;?>">
                         <div class="card-body">
-                            <h5 class="card-title">Les insectes rampants</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                card's
-                                content.</p>
-                            <a href="insectes_rampants.php" class="btn btn-primary">En savoir plus</a>
+                            <h5 class="card-title"><?= $indexCardInsecte['titre'] ;?></h5>
+                            <p class="card-text"><?= $indexCardInsecte['contenu'];?></p>
+                            <a href="<?= $indexCardInsecte['lien'];?>" class="btn btn-primary">En savoir plus</a>
                         </div>
+                        
                     </div>
+                    
                 </div>
-            
-                <div class="col-md-4 my-2 d-flex">
-                    <div class="card">
-                        <img src="uploads/images/volants.jpeg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Les insectes volants</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                card's
-                                content.</p>
-                            <a href="insectes_volants.php" class="btn btn-primary">En savoir plus</a>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="col-md-4 my-2 d-flex">
-                    <div class="card">
-                        <img src="uploads/images/xylophages.jpeg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Les insectes xylophages</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                card's
-                                content.</p>
-                            <a href="insectes_xylophages.php" class="btn btn-primary">En savoir plus</a>
-                        </div>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
 <?php
     require_once 'footer.html';
