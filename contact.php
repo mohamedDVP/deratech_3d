@@ -3,11 +3,11 @@
 ?>
     <h2 class="w-100 p-4 d-flex justify-content-center pb-4">Nous contacter</h2>
         <section class="w-100 p-4 d-flex justify-content-center pb-4 needs-validation" >
-            <form style="width: 26rem;" action="">
+            <form style="width: 26rem;" action="envoiForm.php" method="post">
                 <!-- Name input -->
                 <div data-mdb-input-init="" class="form-outline mb-4" data-mdb-input-initialized="true">
                     <label class="form-label" for="form4Example1" style="margin-left: 0px;" required>Nom</label>
-                    <input type="text" id="form4Example1" class="form-control">
+                    <input type="text" id="form4Example1" class="form-control" name="nom">
                     <div class="form-notch">
                         <div class="form-notch-leading" style="width: 9px;">
                         </div>
@@ -21,7 +21,7 @@
                 <!-- Email input -->
                 <div data-mdb-input-init="" class="form-outline mb-4" data-mdb-input-initialized="true">
                     <label class="form-label" for="form4Example2" style="margin-left: 0px;" required>Email</label>
-                    <input type="email" id="form4Example2" class="form-control">
+                    <input type="email" id="form4Example2" class="form-control" name="mail">
                     <div class="form-notch">
                         <div class="form-notch-leading" style="width: 9px;">
                         </div>
@@ -35,7 +35,7 @@
                 <!-- Message input -->
                 <div data-mdb-input-init="" class="form-outline mb-4" data-mdb-input-initialized="true">
                     <label class="form-label" for="form4Example3" style="margin-left: 0px;" required>Message</label>
-                    <textarea class="form-control" id="form4Example3" rows="4"></textarea>
+                    <textarea class="form-control" id="form4Example3" rows="4" name="message"></textarea>
                     <div class="form-notch">
                         <div class="form-notch-leading" style="width: 9px;">
                         </div>
@@ -48,7 +48,7 @@
 
 
                 <!-- Submit button -->
-                <button data-mdb-ripple-init="" type="button" class="btn btn-primary btn-block mb-4">Envoyer</button>
+                <input data-mdb-ripple-init="" type="submit" class="btn btn-primary btn-block mb-4" name="send">Envoyer</input>
             </form>
         </section>
 
