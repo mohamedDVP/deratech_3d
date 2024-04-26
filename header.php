@@ -17,18 +17,23 @@
     </head>
     <body>
         <div class="container">
-            <header class="d-flex justify-content-center py-3">
-                <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                    <div class="container-fluid">
-                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                            <ul class="navbar-nav">
+            <header class="d-flex justify-content-end py-3">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+                    
+                 <div class="container-fluid">
+                    <a class="navbar-brand" href="#"></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarScroll">
+                            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 300px;">
                                 <?php
                                     foreach($menu as $content) 
                                     {?>
                                         <li class="nav-item">
                                     <?php   if(isset($content['item']) && is_array($content['item']))
                                             {?>
-                                                <a class="nav-link dropdown-toggle" href="<?= $content['url']; ?>.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <a class="nav-link active dropdown-toggle" href="<?= $content['url']; ?>.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                     <?= $content['name'];?>
                                                 </a>
                                                 <ul class="dropdown-menu">
@@ -51,6 +56,7 @@
                             <?php /* test */  }?>
                             </ul>
                         </div>
+      </div>
                     </div>
                 </nav>
             </header>
