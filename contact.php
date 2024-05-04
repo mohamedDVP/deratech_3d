@@ -48,7 +48,7 @@
 
 
                 <!-- Submit button -->
-                <input data-mdb-ripple-init="" type="submit" class="btn btn-primary btn-block mb-4" name="send">Envoyer</input>
+                <input data-mdb-ripple-init="" type="submit" class="btn btn-primary btn-block mb-4" name="send">
             </form>
         </section>
 

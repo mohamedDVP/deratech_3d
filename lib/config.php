@@ -85,18 +85,18 @@
             'titre' => 'Les insectes rampants',
             'contenu' => "Some quick example text to build on the card title and make up the bulk of the card's content.",
             'lien' => 'insectes_rampants.php',
-            'image' => 'uploads/images/rampants.jpeg'
+            'image' => 'uploads/images/rampants.jpg'
         ],
         [
             'titre' => 'Les insectes volants',
             'contenu' => "Some quick example text to build on the card title and make up the bulk of the card's content.",
             'lien' => 'insectes_volants.php',
-            'image' => 'uploads/images/volants.jpeg'
+            'image' => 'uploads/images/volants.jpg'
         ],
         [
             'titre' => 'Les insectes xylophages',
             'contenu' => "Some quick example text to build on the card title and make up the bulk of the card's content.",
             'lien' => 'insectes_xylophages.php',
-            'image' => 'uploads/images/xylophages.jpeg'
+            'image' => 'uploads/images/xylophages.jpg'
         ]
     ];

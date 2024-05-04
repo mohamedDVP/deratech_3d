@@ -1,6 +1,7 @@
 <?php
-    $retour = mail('deratechd@gmail.com', 'Envoi depuis la page Contact', $_POST['message'], 'From: '.$_POST['mail']. "\r\n" . 'Reply-to: ' . $_POST['mail']);
     if(isset($_POST['send'])){
+        $retour = mail('mohamed.mak@laposte.net', 'Envoi depuis la page Contact', $_POST['message'], 'From: '.$_POST['mail']. "\r\n" . 'Reply-to: ' . $_POST['mail']);
+    
         if (isset($_POST['message'])) 
         {
             $entete  = 'MIME-Version: 1.0' . "\r\n";
