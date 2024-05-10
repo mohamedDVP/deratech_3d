@@ -11,47 +11,59 @@ try {
 }catch (Exception $e){
     echo "Mailer Error: ".$e->getMessage();
 }
-$phpmailer->SMTPDebug = SMTP::DEBUG_SERVER; 
-$phpmailer->isSMTP();
-$phpmailer->Host = 'smtp.laposte.net';
-$phpmailer->SMTPAuth = true;
-$phpmailer->Port = 587;
-$phpmailer->Username = $SMTP_USERNAME;
-$phpmailer->Password = $SMTP_PASSWORD;
-$phpmailer->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+$errors = [];
 
-$phpmailer->setFrom("mohamed.mak@laposte.net", $_POST['nom']);
-$phpmailer->addAddress($_POST['mail']);
+if(!array_key_exists('nom', $_POST) || $_POST['nom'] == ''){
+    $errors['nom'] = "Vous n'avez pas renseigné votre nom";
+}
+if(!array_key_exists('mail', $_POST) || $_POST['mail'] == ''|| !filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL)){
+    $errors['mail'] = "Vous n'avez pas renseigné un email valide";
+}
+if(!array_key_exists('message', $_POST) || $_POST['message'] == ''){
+    $errors['message'] = "Vous n'avez pas renseigné votre message";
+}
+session_start();
+if(!empty($errors)){
+    
+    $_SESSION['errors'] = $errors;
+    $_SESSION['inputs'] = $_POST;
+    header('location: contact.php');
+}else
+{
+    $_SESSION['success'] = 1;
+    
+    $phpmailer->isSMTP();
+    $phpmailer->Host = 'smtp.laposte.net';
+    $phpmailer->SMTPAuth = true;
+    $phpmailer->Port = 587;
+    $phpmailer->Username = $SMTP_USERNAME;
+    $phpmailer->Password = $SMTP_PASSWORD;
+    $phpmailer->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 
-$phpmailer->isHTML(true);
-$phpmailer->Subject = 'Demande de contact';
-$phpmailer->Body = $_POST['message'];
+    $phpmailer->setFrom("mohamed.mak@laposte.net", $_POST['nom']);
+    $phpmailer->addAddress($_POST['mail']);
 
-$phpmailer->CharSet = "UTF-8";
-$phpmailer->Encoding = "base64";
+    $phpmailer->isHTML(true);
+    $phpmailer->Subject = 'Demande de contact';
+    $phpmailer->Body = $_POST['message'];
 
-$phpmailer->send();
+    $phpmailer->CharSet = "UTF-8";
+    $phpmailer->Encoding = "base64";
+
+    $phpmailer->send();
+    header('location: contact.php');
+}
+
+
+/* if ($phpmailer)
+{
+    header('location: contact.php?message=success');
+}
+else
+{
+    header('location: contact.php?message=error');
+} */
 
 
 
-/*if(isset($_POST['send'])){
-    $destinataire = 'mohamed.mak@laposte.net';
-    // Pour les champs $expediteur / $copie / $destinataire, séparer par une virgule s'il y a plusieurs adresses
-    $expediteur = $_POST['mail'];
-    $objet = 'Test'; // Objet du message
-    $headers  = 'MIME-Version: 1.0' . "\n"; // Version MIME
-    $headers .= 'Content-type: text/html; charset=ISO-8859-1'."\n"; // l'en-tete Content-type pour le format HTML
-    $headers .= 'Reply-To: '.$expediteur."\r\n"; // Mail de reponse
-    $headers .= 'From: "Nom_de_expediteur"<'.$expediteur.'>'."\r\n"; // Expediteur
-    $headers .= 'Delivered-to: '.$destinataire."\r\n"; // Destinataire       
-    $message = '<div style="width: 100%; text-align: center; font-weight: bold">'.$_POST["message"].'"</div>';
-    if (mail($destinataire, $objet, $message, $headers)) // Envoi du message
-    {
-        echo 'Votre message a bien été envoyé ';
-    }
-    else // Non envoyé
-    {
-        echo "Votre message n'a pas pu être envoyé";
-    }
-}*/
 
