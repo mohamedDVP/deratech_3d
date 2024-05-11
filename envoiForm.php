@@ -31,39 +31,25 @@ if(!empty($errors)){
 }else
 {
     $_SESSION['success'] = 1;
-    
+    $expediteur = $_POST['mail'];
     $phpmailer->isSMTP();
-    $phpmailer->Host = 'smtp.laposte.net';
+    $phpmailer->Host = $SMTP_HOST;
     $phpmailer->SMTPAuth = true;
-    $phpmailer->Port = 587;
+    $phpmailer->Port = $SMTP_PORT;
     $phpmailer->Username = $SMTP_USERNAME;
     $phpmailer->Password = $SMTP_PASSWORD;
     $phpmailer->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 
-    $phpmailer->setFrom("mohamed.mak@laposte.net", $_POST['nom']);
-    $phpmailer->addAddress($_POST['mail']);
-
+    $phpmailer->setFrom($SMTP_USERNAME, $_POST['nom']);
+    $phpmailer->addAddress($SMTP_USERNAME);
+    
     $phpmailer->isHTML(true);
     $phpmailer->Subject = 'Demande de contact';
-    $phpmailer->Body = $_POST['message'];
+    $phpmailer->Body = $_POST['message']. '<br> Contact : '.$expediteur;
 
     $phpmailer->CharSet = "UTF-8";
     $phpmailer->Encoding = "base64";
-
+    
     $phpmailer->send();
     header('location: contact.php');
 }
-
-
-/* if ($phpmailer)
-{
-    header('location: contact.php?message=success');
-}
-else
-{
-    header('location: contact.php?message=error');
-} */
-
-
-
-
