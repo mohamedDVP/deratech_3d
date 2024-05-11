@@ -5,9 +5,14 @@
     <div class="row">
     <h2 class="w-100 p-4 d-flex justify-content-center pb-4">Nous contacter</h2>
     
+            
+            
+        <section class="w-100 p-4 d-flex justify-content-center pb-4 needs-validation" >
+            
+            <form style="width: 26rem;" action="envoiForm.php" method="post">
             <?php
                 if(array_key_exists('errors', $_SESSION)){?>
-                    <div class="col-md-4 alert alert-danger justify-content-center" >
+                    <div class="alert alert-danger justify-content-center" >
                         <?= implode('<br>', $_SESSION['errors']);?>
                     </div>
             <?php
@@ -15,17 +20,14 @@
             ?>
             <?php
                 if(array_key_exists('success', $_SESSION)){?>
-                    <div class="col-md-4 alert alert-success justify-content-center" >
+                    <div class=" alert alert-success justify-content-center" >
                         Nous avons bien reçu votre mail
                     </div>
             <?php 
                 }
             ?>
-            
-        <section class="w-100 p-4 d-flex justify-content-center pb-4 needs-validation" >
-            
-            <form style="width: 26rem;" action="envoiForm.php" method="post">
                 <!-- Name input -->
+
                  <div data-mdb-input-init="" class="form-outline mb-4" data-mdb-input-initialized="true">
                     <label class="form-label" for="form4Example1" style="margin-left: 0px;" required>Nom</label>
                     <input type="text" id="form4Example1" class="form-control" name="nom" value="<?= isset($_SESSION['inputs']['nom']) ? $_SESSION['inputs']['nom'] : "";?>">
