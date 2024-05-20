@@ -3,13 +3,10 @@
     require_once 'header.php';
 ?>
     <div class="row">
-    <h2 class="w-100 p-4 d-flex justify-content-center pb-4">Nous contacter</h2>
-    
-            
-            
+    <h2 class="w-100 p-4 d-flex justify-content-center pb-4">Nous contacter</h2>   
         <section class="w-100 p-4 d-flex justify-content-center pb-4 needs-validation" >
             
-            <form style="width: 26rem;" action="envoiForm.php" method="post">
+            <form style="width: 26rem;" action="envoiFormContact.php" method="post">
             <?php
                 if(array_key_exists('errors', $_SESSION)){?>
                     <div class="alert alert-danger justify-content-center" >
