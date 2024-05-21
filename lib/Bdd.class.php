@@ -1,9 +1,9 @@
 <?php
 class Db {
-    private $host = "localhost";
-    private $db_name = "deratech_3d";
-    private $username = "root";
-    private $password = "";
+    private $host = "mysql-deratech3d.alwaysdata.net";
+    private $db_name = "deratech3d_bdd";
+    private $username = "359780_deratech3";
+    private $password = "Deratech_3d_Samir";
     public $connexion;
 
     // Méthode pour obtenir la connexion à la base de données
