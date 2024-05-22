@@ -2,7 +2,7 @@
 require 'vendor/autoload.php';
 use Dotenv\Dotenv;
 $env=Dotenv::createImmutable(dirname(__DIR__));
-echo __DIR__;
+
 $env->Load();
 class Db {
     private $host;
