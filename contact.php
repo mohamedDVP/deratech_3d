@@ -1,12 +1,14 @@
 <?php
     session_start();
     require_once 'header.php';
+    require 'lib/tools.php';
 ?>
     <div class="row">
     <h2 class="w-100 p-4 d-flex justify-content-center pb-4">Nous contacter</h2>   
         <section class="w-100 p-4 d-flex justify-content-center pb-4 needs-validation" >
             
             <form style="width: 26rem;" action="envoiFormContact.php" method="post">
+            <?php $formContact = new FormContact();?>
             <?php
                 if(array_key_exists('errors', $_SESSION)){?>
                     <div class="alert alert-danger justify-content-center" >
@@ -26,16 +28,7 @@
                 <!-- Name input -->
 
                  <div data-mdb-input-init="" class="form-outline mb-4" data-mdb-input-initialized="true">
-                    <label class="form-label" for="form4Example1" style="margin-left: 0px;" required>Nom</label>
-                    <input type="text" id="form4Example1" class="form-control" name="nom" value="<?= isset($_SESSION['inputs']['nom']) ? $_SESSION['inputs']['nom'] : "";?>">
-                    <div class="form-notch">
-                        <div class="form-notch-leading" style="width: 9px;">
-                        </div>
-                        <div class="form-notch-middle" style="width: 42.4px;">
-                        </div>
-                        <div class="form-notch-trailing">
-                        </div>
-                    </div>
+                    <?= $formContact->text('name', 'Nom');?>
                 </div>
 
                 <!-- Email input -->

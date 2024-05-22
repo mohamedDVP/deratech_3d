@@ -1,20 +1,31 @@
 <?php
-class Db {
-    private $host = "mysql-deratech3d.alwaysdata.net";
-    private $db_name = "deratech3d_bdd";
-    private $username = "359780_deratech3";
-    private $password = "Deratech_3d_Samir";
-    public $connexion;
 
-    // Méthode pour obtenir la connexion à la base de données
-    public function getConnection(){
-        $this->connexion = null;
+$env = Dotenv\Dotenv::createImmutable(__DIR__);
+$env->load();
+class Db {
+    private $host;
+    private $dbname;
+    private $username;
+    private $password;
+    private $pdo;
+
+    public function __construct() {
+        $this->host = $_ENV['DB_HOST'];
+        $this->dbname = $_ENV['DB_NAME'];
+        $this->username = $_ENV['DB_USER'];
+        $this->password = $_ENV['DB_PASSWORD'];
+
         try {
-            $this->connexion = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->db_name, $this->username, $this->password);
-        } catch(PDOException $exception){
-            echo "Erreur de connexion : " . $exception->getMessage();
+            $dsn = "mysql:host={$this->host};dbname={$this->dbname};charset=utf8";
+            $this->pdo = new PDO($dsn, $this->username, $this->password);
+            $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $e) {
+            die("Connection failed: " . $e->getMessage());
         }
-        return $this->connexion;
+    }
+
+    public function getConnection() {
+        return $this->pdo;
     }
 }
 ?>
