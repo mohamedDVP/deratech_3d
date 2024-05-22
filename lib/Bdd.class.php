@@ -31,6 +31,3 @@ class Db {
     }
     
 }
-
-var_dump($_SERVER);
-?>
