@@ -1,7 +1,9 @@
 <?php
-
-$env = Dotenv\Dotenv::createImmutable(__DIR__);
-$env->load();
+require 'vendor/autoload.php';
+use Dotenv\Dotenv;
+$env=Dotenv::createImmutable(dirname(__DIR__));
+echo __DIR__;
+$env->Load();
 class Db {
     private $host;
     private $dbname;
@@ -10,10 +12,10 @@ class Db {
     private $pdo;
 
     public function __construct() {
-        $this->host = $_ENV['DB_HOST'];
-        $this->dbname = $_ENV['DB_NAME'];
-        $this->username = $_ENV['DB_USER'];
-        $this->password = $_ENV['DB_PASSWORD'];
+        $this->host = $_SERVER["DB_HOST"];
+        $this->dbname = $_SERVER['DB_NAME'];
+        $this->username = $_SERVER['DB_USER'];
+        $this->password = $_SERVER['DB_PASSWORD'];
 
         try {
             $dsn = "mysql:host={$this->host};dbname={$this->dbname};charset=utf8";
@@ -27,5 +29,8 @@ class Db {
     public function getConnection() {
         return $this->pdo;
     }
+    
 }
+
+var_dump($_SERVER);
 ?>
