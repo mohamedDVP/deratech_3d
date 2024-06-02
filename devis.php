@@ -1,38 +1,66 @@
 <?php
 session_start();
 require_once ("header.php");
-require_once("lib/Bdd.class.php");
-require_once("lib/FormDevis.class.php");    
-$database = new Db();
-$connexion = $database->getConnection();
-
-// Créez une instance de la classe ServiceSelection pour récupérer les services depuis la base de données
-$serviceSelection = new FormDevis($connexion);
-
+require_once ("lib/config.php");
 ?>
+<?php 
+                    $messages = [];
+                    $errors = [];
 
+                    if (isset($_POST["send"])) {
+                        if (!isset($_POST["email"]) || !filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
+                            $errors[] = "L'adresse e-mail n'est pas valide";
+                        }
+                        if (!isset($_POST["message"]) || $_POST["message"] == "") {
+                            $errors[] = "Le message ne doit pas être vide";
+                        }
+                        if (!isset($_POST["nom"]) || !filter_var($_POST["nom"])) {
+                            $errors[] = "Le nom ne doit pas être vide";
+                        }
+                        if (!isset($_POST["service"]) || !filter_var($_POST["service"])) {
+                            $errors[] = "Le service doit être séléctionné";
+                        }
+                        if (!$errors) {
+                            $to = _APP_EMAIL_;
+                            $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
+                            $subject = "[Deratech3d] Formulaire de demande de devis";
+                            $emailContent = "Email : $email<br>"
+                                        ."Message : <br>".nl2br(htmlentities($_POST["message"]));
+                            $headers = "From: "._APP_EMAIL_ . "\r\n" .
+                                        "MIME-Version: 1.0" . "\r\n" .
+                                        "Content-type: text/html; charset=utf-8";
+                    
+                    
+                    
+                            if(mail($to, $subject, $emailContent, $headers)) {
+                                $messages[] = "Votre email a bien été envoyé";
+                    
+                            } else {
+                                $errors[] = "Une erreur s'est produite durant l'envoi";
+                            }
+                        }
+
+                    }
+
+                ?>
 
     <div class="row">
         <h2 class="w-100 p-4 d-flex justify-content-center pb-4">Demander un devis</h2>
+        <?php foreach($messages as $message) { ?>
+            <div class="alert alert-success">
+                <?=$message; ?>
+            </div>
+        <?php } ?>
+
+        <?php foreach($errors as $error) { ?>
+            <div class="alert alert-success">
+                <?=$error; ?>
+            </div>
+        <?php } ?>
         <section class="w-100 p-4 d-flex justify-content-center pb-4 needs-validation" >
 
-            <form style="width: 26rem;" action="envoiFormDevis.php" method="post">
-                <?php
-                    if(array_key_exists('errors', $_SESSION)){?>
-                        <div class="alert alert-danger justify-content-center" >
-                            <?= implode('<br>', $_SESSION['errors']);?>
-                        </div>
-                <?php
-                    }
-                ?>
-                <?php
-                    if(array_key_exists('success', $_SESSION)){?>
-                        <div class=" alert alert-success justify-content-center" >
-                            Nous avons bien reçu votre demande
-                        </div>
-                <?php 
-                    }
-                ?>
+            <form style="width: 26rem;" method="post">
+                
                 <!-- Name input -->
 
                 <div data-mdb-input-init="" class="form-outline mb-4" data-mdb-input-initialized="true">
@@ -80,9 +108,10 @@ $serviceSelection = new FormDevis($connexion);
                 <div data-mdb-input-init="" class="form-outline mb-4" data-mdb-input-initialized="true">
                     <label class ="form-label" for="form4Exemple3" style="margin-left: 0px;" required>Service</label>
                     <select class="form-select" id="floatingSelectGrid" name="service"><?= isset($_SESSION['inputs']['service']) ? $_SESSION['inputs']['service'] : "";?>
-                        <?php echo $serviceSelection->selectOptionsService(); ?>
-                    
-                    
+                        <option value="" selected>Choisissez un service</option>
+                        <option value="1">Deratisation</option>
+                        <option value="2">Desinsectisation</option>
+                        <option value="3">Desinfection</option>
                     </select>
                 </div>
 

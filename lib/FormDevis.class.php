@@ -25,8 +25,9 @@ class FormDevis {
 
     // Méthode pour enregistrer les données dans la base de données
     public function saveToDatabase($connexion){
+        date_default_timezone_set('Europe/Paris');
         $date_heure_actuelle = new DateTime();
-        $date_heure_formatee = $date_heure_actuelle->format('Y-m-d H:i:s');
+        $date_heure_formatee = $date_heure_actuelle->format('Y-m-d H:i:s T');
         // Préparez la requête d'insertion
         $query = "INSERT INTO devis (nom, mail, id_service, message, date) VALUES (:nom, :email, :service, :message, :date)";
         $stmt = $connexion->prepare($query);
@@ -58,6 +59,7 @@ class FormDevis {
         }
         return $options;
     }
+    
     
 }
 ?>

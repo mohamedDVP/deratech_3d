@@ -22,8 +22,8 @@
             <header class="d-flex justify-content-end py-3">
                 <nav class="navbar navbar-expand-lg bg-body-tertiary ">
                     
-                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#"></a>
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#"></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -44,22 +44,20 @@
                                                 {?>
                                                     <a class="dropdown-item" href="<?= $subContent['url']; ?>.php">
                                                         <?= $subContent['name']; ?>
-                                                    </a>
-                                                           
+                                                    </a>                                            
                                         <?php   }?>
                                                 </ul>   
-                                    <?php  }
+                                      <?php }
                                             else 
                                             {?>        
                                                 <a class="nav-link active" aria-current="page" href="<?= $content['url'];?>.php">
                                                     <?= $content['name'];?>
                                                 </a>       
-                                <?php   }?>
+                                    <?php   }?>
                                         </li> 
-                            <?php /* test */  }?>
+                             <?php }?>
                             </ul>
                         </div>
-      </div>
                     </div>
                 </nav>
             </header>

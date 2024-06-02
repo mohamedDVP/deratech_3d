@@ -18,6 +18,7 @@ class FormContact {
 
     // Méthode pour enregistrer les données dans la base de données
     public function saveToDatabase($connexion){
+        date_default_timezone_set('Europe/Paris');
         $date_heure_actuelle = new DateTime();
         $date_heure_formatee = $date_heure_actuelle->format('Y-m-d H:i:s');
         // Préparez la requête d'insertion
