@@ -1,48 +1,67 @@
 <?php
-session_start();
-require_once ("header.php");
-require_once ("lib/config.php");
+    session_start();
+    require_once 'header.php';
+    require_once ("lib/config.php");
+    require 'vendor/autoload.php';
+    use Dotenv\Dotenv;
+    $env=Dotenv::createImmutable(__DIR__);
+
+    $env->Load();
+    use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+$mail = new PHPMailer(true);
 ?>
 <?php 
-                    $messages = [];
-                    $errors = [];
+        $messages = [];
+        $errors = [];
 
-                    if (isset($_POST["send"])) {
-                        if (!isset($_POST["email"]) || !filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-                            $errors[] = "L'adresse e-mail n'est pas valide";
-                        }
-                        if (!isset($_POST["message"]) || $_POST["message"] == "") {
-                            $errors[] = "Le message ne doit pas être vide";
-                        }
-                        if (!isset($_POST["nom"]) || !filter_var($_POST["nom"])) {
-                            $errors[] = "Le nom ne doit pas être vide";
-                        }
-                        if (!isset($_POST["service"]) || !filter_var($_POST["service"])) {
-                            $errors[] = "Le service doit être séléctionné";
-                        }
-                        if (!$errors) {
-                            $to = _APP_EMAIL_;
-                            $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
-                            $subject = "[Deratech3d] Formulaire de demande de devis";
-                            $emailContent = "Email : $email<br>"
-                                        ."Message : <br>".nl2br(htmlentities($_POST["message"]));
-                            $headers = "From: "._APP_EMAIL_ . "\r\n" .
-                                        "MIME-Version: 1.0" . "\r\n" .
-                                        "Content-type: text/html; charset=utf-8";
-                    
-                    
-                    
-                            if(mail($to, $subject, $emailContent, $headers)) {
-                                $messages[] = "Votre email a bien été envoyé";
-                    
-                            } else {
-                                $errors[] = "Une erreur s'est produite durant l'envoi";
-                            }
-                        }
+        if (isset($_POST["send"])) {
+            if (!isset($_POST["mail"]) || !filter_var($_POST["mail"], FILTER_VALIDATE_EMAIL)) {
+                $errors[] = "L'adresse e-mail n'est pas valide";
+            }
+            if (!isset($_POST["message"]) || $_POST["message"] == "") {
+                $errors[] = "Le message ne doit pas être vide";
+            }
+            if (!isset($_POST["nom"]) || !filter_var($_POST["nom"])) {
+                $errors[] = "Le nom ne doit pas être vide";
+            }
+            if (!$errors) {
+                try{
+                    //Server settings
+                    //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+                    $mail->isSMTP();                                            //Send using SMTP
+                    $mail->SMTPSecure = 'ssl';
+                    $mail->Host       = $_SERVER['SMTP_HOST'];                     //Set the SMTP server to send through
+                    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+                    $mail->Username   = $_SERVER['SMTP_USERNAME'];                     //SMTP username
+                    $mail->Password   = $_SERVER['SMTP_PASSWORD'];                               //SMTP password
+                    $mail->Port       = $_SERVER['SMTP_PORT'];                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+                    $mail->CharSet = 'UTF-8';
+                    $mail->Encoding = 'base64';
+                    $mail->setLanguage('fr', 'vendor/phpmailer/phpmailer/language');
 
-                    }
+                    //Recipients
+                    $mail->setFrom($_SERVER['SMTP_USERNAME']);
+                    $mail->addAddress($_SERVER['SMTP_USERNAME']);     //Add a recipient
+                   
 
-                ?>
+                    //Content
+                    $mail->isHTML(true);                                  //Set email format to HTML
+                    $mail->Subject = 'Formulaire de demande de devis de '.$_POST["nom"];
+                    $mail->Body    = $_POST["message"]."<br> Service :".$_POST['service']."<br> Email : ".$_POST["mail"];
+                    $mail->AltBody = $_POST["message"]."<br> Service :".$_POST['service']."<br> Email : ".$_POST["mail"];
+
+                    $mail->send();
+                    $messages[] = "Votre email a bien été envoyé";
+                } catch (Exception $e) {
+                    $errors[] = "Une erreur s'est produite durant l'envoi".$mail->ErrorInfo;
+                }
+            }
+
+        }
+
+    ?>
 
     <div class="row">
         <h2 class="w-100 p-4 d-flex justify-content-center pb-4">Demander un devis</h2>
@@ -109,9 +128,9 @@ require_once ("lib/config.php");
                     <label class ="form-label" for="form4Exemple3" style="margin-left: 0px;" required>Service</label>
                     <select class="form-select" id="floatingSelectGrid" name="service"><?= isset($_SESSION['inputs']['service']) ? $_SESSION['inputs']['service'] : "";?>
                         <option value="" selected>Choisissez un service</option>
-                        <option value="1">Deratisation</option>
-                        <option value="2">Desinsectisation</option>
-                        <option value="3">Desinfection</option>
+                        <option value="Deratisation">Deratisation</option>
+                        <option value="desinsectisation">Desinsectisation</option>
+                        <option value="Desinfection">Desinfection</option>
                     </select>
                 </div>
 

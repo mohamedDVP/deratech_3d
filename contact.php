@@ -7,6 +7,10 @@
     $env=Dotenv::createImmutable(__DIR__);
 
     $env->Load();
+    use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+$mail = new PHPMailer(true);
 ?>
 <?php 
         $messages = [];
@@ -23,22 +27,35 @@
                 $errors[] = "Le nom ne doit pas être vide";
             }
             if (!$errors) {
-                $to = $_SERVER['SMTP_USERNAME'];
-                $email = filter_var($_POST["mail"], FILTER_SANITIZE_EMAIL);
-                $subject = "[Deratech3d] Formulaire de contact";
-                $emailContent = "Email : $email<br>"
-                            ."Message : <br>".nl2br(htmlentities($_POST["message"]));
-                $headers = "From: ".$_SERVER['SMTP_USERNAME'] . "\r\n" .
-                            "MIME-Version: 1.0" . "\r\n" .
-                            "Content-type: text/html; charset=utf-8";
-        
-        
-        
-                if(mail($to, $subject, $emailContent, $headers)) {
+                try{
+                    //Server settings
+                    //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+                    $mail->isSMTP();                                            //Send using SMTP
+                    $mail->SMTPSecure = 'ssl';
+                    $mail->Host       = $_SERVER['SMTP_HOST'];                     //Set the SMTP server to send through
+                    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+                    $mail->Username   = $_SERVER['SMTP_USERNAME'];                     //SMTP username
+                    $mail->Password   = $_SERVER['SMTP_PASSWORD'];                               //SMTP password
+                    $mail->Port       = $_SERVER['SMTP_PORT'];                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+                    $mail->CharSet = 'UTF-8';
+                    $mail->Encoding = 'base64';
+                    $mail->setLanguage('fr', 'vendor/phpmailer/phpmailer/language');
+
+                    //Recipients
+                    $mail->setFrom($_SERVER['SMTP_USERNAME']);
+                    $mail->addAddress($_SERVER['SMTP_USERNAME']);     //Add a recipient
+                   
+
+                    //Content
+                    $mail->isHTML(true);                                  //Set email format to HTML
+                    $mail->Subject = 'Formulaire de contact de '.$_POST["nom"];
+                    $mail->Body    = $_POST["message"]."<br> Email : ".$_POST["mail"];
+                    $mail->AltBody = $_POST["message"]."<br> Email : ".$_POST["mail"];;
+
+                    $mail->send();
                     $messages[] = "Votre email a bien été envoyé";
-        
-                } else {
-                    $errors[] = "Une erreur s'est produite durant l'envoi";
+                } catch (Exception $e) {
+                    $errors[] = "Une erreur s'est produite durant l'envoi".$mail->ErrorInfo;
                 }
             }
 

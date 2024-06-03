@@ -102,4 +102,4 @@
     ];
 
 
-define("_APP_EMAIL_", "deratechd3@gmail.com");
+
