@@ -61,19 +61,19 @@
 
     $indexCardsServices = [
         [
-            'titre' => 'Deratisation',
+            'titre' => 'La Dératisation',
             'contenu' => "La dératisation (ou lutte contre les rats) est d'empêcher l'apparition de rats vivant en liberté à proximité des établissements humains, ou au moins de les maintenir petits afin de réduire le risque d'épidémie, la destruction de la nourriture et les dommages et la pollution par les animaux.",
             'lien' => 'deratisation.php',
             'image' => 'uploads/images/deratisation.jpg'
         ],
         [
-            'titre' => 'Desinsectisation',
+            'titre' => 'La Désinsectisation',
             'contenu' => "Désinsectiser, c'est détruire des insectes nuisibles ou porteurs de germes. Par désinsectisation, on signifie donc l'acte de tuer, d'exterminer certains insectes par divers moyens insecticides.",
             'lien' => 'desinsectisation.php',
             'image' => 'uploads/images/desinsectisation.jpg'
         ],
         [
-            'titre' => 'Desinfection',
+            'titre' => 'La Désinfection',
             'contenu' => "La désinfection est une opération d'élimination volontaire et momentanée de certains germes (sinon on parle de stérilisation), de manière à stopper ou prévenir une infection ou le risque d'infection ou surinfection par des micro-organismes ou virus pathogènes et/ou indésirables (une grande partie des germes le deviennent en cas de déplétion immunitaire).",
             'lien' => 'desinfection.php',
             'image' => 'uploads/images/desinfection.jpg'
