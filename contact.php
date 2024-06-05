@@ -63,18 +63,26 @@ $mail = new PHPMailer(true);
 
     ?>
     <div class="row">
-    <h2 class="w-100 p-4 d-flex justify-content-center pb-4">Nous contacter</h2>   
-        <?php foreach($messages as $message) { ?>
-            <div class="alert alert-success">
-                <?=$message; ?>
-            </div>
-        <?php } ?>
+        <h2 class="w-100 p-4 d-flex justify-content-center pb-4">Nous contacter</h2>   
+            <?php foreach($messages as $message) { ?>
+                <div class="w-100 d-flex justify-content-center needs-validation" >
+                    <div class="alert alert-success">
+                        <?=$message; ?>
+                    </div>
+                </div>
+                
+            <?php } ?>
 
-        <?php foreach($errors as $error) { ?>
-            <div class="alert alert-success">
-                <?=$error; ?>
-            </div>
-        <?php } ?>
+            <?php foreach($errors as $error) { ?>
+                <div class="w-100 d-flex justify-content-center needs-validation" >
+                    <div class="alert alert-danger ">
+                        <?=$error; ?>
+                    </div>
+                </div>
+                
+            <?php } ?>
+    </div>
+        
         <section class="w-100 p-4 d-flex justify-content-center pb-4 needs-validation" >
             
             <form style="width: 26rem;" method="post">

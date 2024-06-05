@@ -12,6 +12,7 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 $mail = new PHPMailer(true);
 ?>
+
 <?php 
         $messages = [];
         $errors = [];
@@ -66,16 +67,22 @@ $mail = new PHPMailer(true);
     <div class="row">
         <h2 class="w-100 p-4 d-flex justify-content-center pb-4">Demander un devis</h2>
         <?php foreach($messages as $message) { ?>
-            <div class="alert alert-success">
-                <?=$message; ?>
-            </div>
-        <?php } ?>
+                <div class="w-100 d-flex justify-content-center needs-validation" >
+                    <div class="alert alert-success">
+                        <?=$message; ?>
+                    </div>
+                </div>
+            <?php } ?>
 
-        <?php foreach($errors as $error) { ?>
-            <div class="alert alert-success">
-                <?=$error; ?>
-            </div>
-        <?php } ?>
+            <?php foreach($errors as $error) { ?>
+                <div class="w-100 d-flex justify-content-center needs-validation" >
+                    <div class="alert alert-danger ">
+                        <?=$error; ?>
+                    </div>
+                </div>
+                
+            <?php } ?>
+        
         <section class="w-100 p-4 d-flex justify-content-center pb-4 needs-validation" >
 
             <form style="width: 26rem;" method="post">
