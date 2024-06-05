@@ -133,6 +133,7 @@ $mail = new PHPMailer(true);
     unset($_SESSION['inputs']);
     unset($_SESSION['success']);
     unset($_SESSION['errors']);
+    require_once 'footer.html';
 ?>
 
        
