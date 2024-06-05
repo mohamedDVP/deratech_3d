@@ -9,7 +9,7 @@
                 </div>
                 <div class="col-lg-6">
                     <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Qui sommes-nous?</h1>
-                    <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                    <p class="lead">Nous sommes une équipe à votre service pour traiter les nuisibles avec nos produits reconnus et efficaces. Nous sommes soucieux de votre demande et votre besoin et nous nous engagons à agir rapidement pour votre confort...</p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                         <a href="devis.php" class="btn btn-primary">Demander un devis</a>
                     </div>
