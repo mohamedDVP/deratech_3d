@@ -29,7 +29,7 @@ require_once ("header.php");
             </div>
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
                 <div class="col-10 col-sm-8 col-lg-6">
-                    <img src="uploads/images/plantes-abimes-insectes.jpg" class="d-block mx-lg-auto img-fluid" alt="câbles rongés" width="500" height="200" loading="lazy">
+                    <img src="uploads/images/plantes-abimes-insectes.jpg" class="d-block mx-lg-auto img-fluid" alt="Plantes abimés par les insectes" width="500" height="200" loading="lazy">
                 </div>
                 <div class="col-lg-6">
                     <p class="lead"><h4>Protection des Biens</h4></p>
@@ -77,7 +77,7 @@ require_once ("header.php");
             <h2 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Mesures de Prévention</h2>
             <div class="row flex-lg-row align-items-center g-5 py-5">
                 <div class="col-10 col-sm-8 col-lg-6">
-                    <img src="uploads/images/conteneur-aliments.jpg" class="d-block mx-lg-auto img-fluid" alt="Colmatage fissures" width="700" height="500" loading="lazy">
+                    <img src="uploads/images/conteneur-aliments.jpg" class="d-block mx-lg-auto img-fluid" alt="Conteneur alimentaire hermétique" width="700" height="500" loading="lazy">
                 </div>
                 <div class="col-lg-6">
                     <p class="lead"><h4>Pour éviter les infestations, suivez ces conseils :</h4></p>
