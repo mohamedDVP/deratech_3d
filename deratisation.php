@@ -21,7 +21,7 @@ require_once ("lib/config.php");
             <h3 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Pourquoi la Dératisation est Cruciale</h3>
             <div class="row flex-lg-row align-items-center g-5 py-5">
                 <div class="col-10 col-sm-8 col-lg-6">
-                    <img src="uploads/images/rat-homme-sante.jpg" class="d-block mx-lg-auto img-fluid" alt="" width="700" height="500" loading="lazy">
+                    <img src="uploads/images/maladies-transmission-rats.jpg" class="d-block mx-lg-auto img-fluid" alt="Infographie sur les maladies transmises par les insectes" width="700" height="500" loading="lazy">
                 </div>
                 <div class="col-lg-6">
                     <p class="lead"><h4>Santé Publique</h4></p>
