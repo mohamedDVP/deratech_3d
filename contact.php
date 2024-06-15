@@ -1,7 +1,7 @@
 <?php
     session_start();
     require_once 'header.php';
-    require_once ("lib/config.php");
+    require_once "lib/config.php";
     require 'vendor/autoload.php';
     use Dotenv\Dotenv;
     $env=Dotenv::createImmutable(__DIR__);
