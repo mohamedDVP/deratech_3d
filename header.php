@@ -28,7 +28,7 @@
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarScroll">
-                            <img src="assets/images/logo_deratech_3d.jpg" width="50" height="50" alt="">
+                            <img src="assets/images/logo_deratech_3d.jpg" width="50" height="50" alt="Logo Deratech 3D">
                             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 300px;">
                                 <?php
                                     foreach($menu as $content) 
