@@ -90,8 +90,8 @@ $mail = new PHPMailer(true);
                 <!-- Name input -->
 
                  <div data-mdb-input-init="" class="form-outline mb-4" data-mdb-input-initialized="true">
-                    <label class="form-label" for="form4Example1" style="margin-left: 0px;" required>Nom</label>
-                    <input type="text" id="form4Example1" class="form-control" name="nom" value="<?= isset($_SESSION['inputs']['nom']) ? $_SESSION['inputs']['nom'] : "";?>">
+                    <label class="form-label" for="form4Example1" style="margin-left: 0px;" >Nom</label>
+                    <input type="text" id="form4Example1" class="form-control" name="nom" value="<?= isset($_SESSION['inputs']['nom']) ? $_SESSION['inputs']['nom'] : "";?>" required>
                     <div class="form-notch">
                         <div class="form-notch-leading" style="width: 9px;">
                         </div>
@@ -104,8 +104,8 @@ $mail = new PHPMailer(true);
 
                 <!-- Email input -->
                 <div data-mdb-input-init="" class="form-outline mb-4" data-mdb-input-initialized="true">
-                    <label class="form-label" for="form4Example2" style="margin-left: 0px;" required>Email</label>
-                    <input type="email" id="form4Example2" class="form-control" name="mail" value="<?= isset($_SESSION['inputs']['mail']) ? $_SESSION['inputs']['mail'] : "";?>">
+                    <label class="form-label" for="form4Example2" style="margin-left: 0px;" >Email</label>
+                    <input type="email" id="form4Example2" class="form-control" name="mail" value="<?= isset($_SESSION['inputs']['mail']) ? $_SESSION['inputs']['mail'] : "";?> " required>
                     <div class="form-notch">
                         <div class="form-notch-leading" style="width: 9px;">
                         </div>
@@ -118,8 +118,8 @@ $mail = new PHPMailer(true);
 
                 <!-- Message input -->
                 <div data-mdb-input-init="" class="form-outline mb-4" data-mdb-input-initialized="true">
-                    <label class="form-label" for="form4Example3" style="margin-left: 0px;" required>Message</label>
-                    <textarea class="form-control" id="form4Example3" rows="4" name="message"><?= isset($_SESSION['inputs']['message']) ? $_SESSION['inputs']['message'] : "";?></textarea>
+                    <label class="form-label" for="form4Example3" style="margin-left: 0px;" >Message</label>
+                    <textarea class="form-control" id="form4Example3" rows="4" name="message" required><?= isset($_SESSION['inputs']['message']) ? $_SESSION['inputs']['message'] : "";?></textarea>
                     <div class="form-notch">
                         <div class="form-notch-leading" style="width: 9px;">
                         </div>
