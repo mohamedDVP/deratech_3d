@@ -10,10 +10,6 @@
         "url" => "services",
         "item" => [
             [
-                "name" => "Tous les services",
-                "url" => "services",
-            ],
-            [
                 "name" => "La deratisation",
                 "url" => "deratisation",
             ],
@@ -31,10 +27,6 @@
         "name" => "Nuisibles",
         "url" => "insectes",
         "item" => [
-            [
-                "name" => "Tous les insectes",
-                "url" => "insectes",
-            ],
             [
                 "name" => "Rampants",
                 "url" => "insectes_rampants",

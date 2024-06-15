@@ -1,13 +1,14 @@
 <?php
 
-require_once ("header.php");
+require_once "header.php";
+require_once "lib/config.php";
 
 ?>
 
         <div class="container col-xxl-8 px-4 py-5">
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
                 <div class="col-10 col-sm-8 col-lg-6">
-                    <img src="<?= $indexCardsServices[1]['image'];?>" class="d-block mx-lg-auto img-fluid" alt="<?= $indexCardsServices[0]['titre'];?>" width="700" height="500" loading="lazy">
+                    <img src="<?= $indexCardsServices[1]['image'];?>" class="d-block mx-lg-auto img-fluid" alt="<?= $indexCardsServices[1]['titre'];?>" width="700" height="500" loading="lazy">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><?= $indexCardsServices[1]['titre'];?></h2>
@@ -49,7 +50,7 @@ require_once ("header.php");
             </div>
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
                 <div class="col-10 col-sm-8 col-lg-6">
-                    <img src="uploads/images/traitement-chimique.jpg" class="d-block mx-lg-auto img-fluid" alt="Traitement chimique"" width="700" height="500" loading="lazy">
+                    <img src="uploads/images/traitement-chimique.jpg" class="d-block mx-lg-auto img-fluid" alt="Traitement chimique" width="700" height="500" loading="lazy">
                 </div>
                 <div class="col-lg-6">
                     <p class="lead"><h4>Traitements Chimiques</h4></p>
@@ -58,7 +59,7 @@ require_once ("header.php");
             </div>
             <div class="row flex-lg-row align-items-center g-5 py-5">
                 <div class="col-10 col-sm-8 col-lg-6">
-                    <img src="uploads/images/traitement-ecologique.jpg" class="d-block mx-lg-auto img-fluid" alt="Traitement écologique"" width="700" height="500" loading="lazy">
+                    <img src="uploads/images/traitement-ecologique.jpg" class="d-block mx-lg-auto img-fluid" alt="Traitement écologique" width="700" height="500" loading="lazy">
                 </div>
                 <div class="col-lg-6">
                     <p class="lead"><h4>Traitements Écologiques</h4></p>
@@ -67,7 +68,7 @@ require_once ("header.php");
             </div>
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
                 <div class="col-10 col-sm-8 col-lg-6">
-                    <img src="uploads/images/prevention.jpg" class="d-block mx-lg-auto img-fluid" alt="Prévention des infestations"" width="700" height="500" loading="lazy">
+                    <img src="uploads/images/prevention.jpg" class="d-block mx-lg-auto img-fluid" alt="Prévention des infestations" width="700" height="500" loading="lazy">
                 </div>
                 <div class="col-lg-6">
                     <p class="lead"><h4>Prévention et Suivi</h4></p>
