@@ -70,7 +70,21 @@ require_once ("lib/config.php");
                 </div>
                 <div class="col-lg-6">
                     <p class="lead"><h4>Prévention et Suivi</h4></p>
-                    <p>Après le traitement initial, nous fournissons des conseils de prévention pour éviter de futures infestations. Nous offrons également des services de suivi pour nous assurer que les insectes ne reviennent pas.</p>
+                    <p>Nous fournissons des conseils pratiques pour maintenir un environnement sain après la désinfection et offrons des services d'entretien réguliers pour prévenir la réapparition des agents pathogènes.</p>
+                </div>
+            </div>
+            <h2 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Conseils de Prévention</h2>
+            <div class="row flex-lg-row align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="uploads/images/conseils-nettoyage-desinfection.jpg" class="d-block mx-lg-auto img-fluid" alt="Conseils de nettoyage" width="700" height="500" loading="lazy">
+                </div>
+                <div class="col-lg-6">
+                    <p class="lead"><h4>Pour assurer une désinfection durable, suivez ces conseils :</h4></p>
+                    <ul>
+                        <li><strong>Nettoyez Régulièrement :</strong> Maintenez une routine de nettoyage quotidienne pour réduire la présence de saletés et de débris.</li>
+                        <li><strong>Ventilation :</strong> Assurez une bonne circulation de l'air pour limiter l'humidité et la prolifération des germes.</li>
+                        <li><strong>Utilisez des Désinfectants :</strong> Appliquez des désinfectants sur les surfaces fréquemment touchées pour tuer les germes.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -79,7 +93,5 @@ require_once ("lib/config.php");
 
 
 <?php
-
 require_once "footer.html";
-
 ?>
