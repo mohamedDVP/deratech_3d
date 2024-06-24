@@ -38,7 +38,7 @@ require_once "lib/config.php";
                 </div>
             </div>
 
-            <h2 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Nos Méthodes de Dératisation</h2>
+            <h2 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Nos Méthodes de Désinsectisation</h2>
             <div class="row flex-lg-row align-items-center g-5 py-5">
                 <div class="col-10 col-sm-8 col-lg-6">
                     <img src="uploads/images/inspection-expert-desinsectisation-domicile.jpg" class="d-block mx-lg-auto img-fluid" alt="Inspection par un expert desinsectisation domicile" width="700" height="500" loading="lazy">
