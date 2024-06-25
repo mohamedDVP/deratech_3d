@@ -1,19 +1,17 @@
 <?php
     session_start();
     require_once 'header.php';
-    require_once ("lib/config.php");
+    require_once "lib/config.php";
     require 'vendor/autoload.php';
     use Dotenv\Dotenv;
     $env=Dotenv::createImmutable(__DIR__);
 
-    $env->Load();
+    $env->safeLoad();
     use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 $mail = new PHPMailer(true);
-?>
 
-<?php 
         $messages = [];
         $errors = [];
 

@@ -11,8 +11,7 @@
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 $mail = new PHPMailer(true);
-?>
-<?php 
+
         $messages = [];
         $errors = [];
 
