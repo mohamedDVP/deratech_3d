@@ -6,7 +6,7 @@
     use Dotenv\Dotenv;
     $env=Dotenv::createImmutable(__DIR__);
 
-    $env->Load();
+    $env->safeLoad();
     use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;

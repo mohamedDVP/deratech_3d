@@ -28,7 +28,7 @@ require_once ("header.php");
         </div>
 
         <h2 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Types Courants d'Insectes Xylophages</h2>
-        <div class="row flex-lg-row align-items-center g-5 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
             <div class="col-10 col-sm-8 col-lg-6">
                 <img src="uploads/images/termites-xylophages.jpg" class="d-block mx-lg-auto img-fluid" alt="Termintes" width="700" height="500" loading="lazy">
             </div>
@@ -37,7 +37,7 @@ require_once ("header.php");
                 <p>Les termites sont parmi les insectes xylophages les plus destructeurs. Ils vivent en colonies et peuvent dévorer le bois de l'intérieur, souvent sans être détectés pendant longtemps.</p>
             </div>
         </div>
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="row flex-lg-row align-items-center g-5 py-5">
             <div class="col-10 col-sm-8 col-lg-6">
                 <img src="uploads/images/capricorne-des-maison-xylophages.jpg" class="d-block mx-lg-auto img-fluid" alt="Capricorne des maisons" width="700" height="500" loading="lazy">
             </div>
@@ -46,7 +46,7 @@ require_once ("header.php");
                 <p>Les capricornes des maisons attaquent principalement les bois résineux et peuvent causer des dégâts considérables aux structures en bois des bâtiments.</p>
             </div>
         </div>
-        <div class="row flex-lg-row align-items-center g-5 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
             <div class="col-10 col-sm-8 col-lg-6">
                 <img src="uploads/images/lyctus-xylophage.jpg" class="d-block mx-lg-auto img-fluid" alt="Lyctus" width="700" height="500" loading="lazy">
             </div>
@@ -55,7 +55,7 @@ require_once ("header.php");
                 <p>Les lyctus préfèrent les bois durs et peuvent endommager les parquets, les meubles et les boiseries.</p>
             </div>
         </div>
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="row flex-lg-row align-items-center g-5 py-5">
             <div class="col-10 col-sm-8 col-lg-6">
                 <img src="uploads/images/vrillettes-xylophage.jpg" class="d-block mx-lg-auto img-fluid" alt="Vrillettes" width="700" height="500" loading="lazy">
             </div>
@@ -65,7 +65,7 @@ require_once ("header.php");
             </div>
         </div>
         <h2 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Nos Solutions pour Éliminer les Insectes Xylophages</h2>
-        <div class="row flex-lg-row align-items-center g-5 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
             <div class="col-10 col-sm-8 col-lg-6">
                 <img src="uploads/images/inspection-expert-xylophages.jpg" class="d-block mx-lg-auto img-fluid" alt="Inspection par un expert" width="700" height="500" loading="lazy">
             </div>
@@ -74,7 +74,7 @@ require_once ("header.php");
                 <p>Nos experts réalisent une inspection minutieuse pour identifier les types d'insectes présents et déterminer l'étendue de l'infestation.</p>
             </div>
         </div>
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="row flex-lg-row align-items-center g-5 py-5">
             <div class="col-10 col-sm-8 col-lg-6">
                 <img src="uploads/images/traitement-chimique-xylopgages.jpg" class="d-block mx-lg-auto img-fluid" alt="Traitement chimique" width="700" height="500" loading="lazy">
             </div>
@@ -83,7 +83,7 @@ require_once ("header.php");
                 <p>Nous utilisons des insecticides de qualité professionnelle pour éliminer les insectes xylophages. Ces produits sont appliqués de manière ciblée pour maximiser leur efficacité.</p>
             </div>
         </div>
-        <div class="row flex-lg-row align-items-center g-5 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
             <div class="col-10 col-sm-8 col-lg-6">
                 <img src="uploads/images/traitement-injection-xylophages.jpg" class="d-block mx-lg-auto img-fluid" alt="Traitement par injection" width="700" height="500" loading="lazy">
             </div>
@@ -92,7 +92,7 @@ require_once ("header.php");
                 <p>Pour les structures en bois fortement infestées, nous utilisons des traitements par injection qui permettent de traiter le bois en profondeur.</p>
             </div>
         </div>
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="row flex-lg-row align-items-center g-5 py-5">
             <div class="col-10 col-sm-8 col-lg-6">
                 <img src="uploads/images/traitement-ecologique-xylophages.jpg" class="d-block mx-lg-auto img-fluid" alt="Traitement écologique" width="700" height="500" loading="lazy">
             </div>
