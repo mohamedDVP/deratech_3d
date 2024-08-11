@@ -33,7 +33,7 @@ $mail = new PHPMailer(true);
                     $mail->SMTPSecure = 'ssl';
                     $mail->Host       = $_SERVER['SMTP_HOST'];                     //Set the SMTP server to send through
                     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-                    $mail->Username   = $_SERVER['SMTP_USERNAME'];                     //SMTP username
+                    /*$mail->Username   = $_SERVER['SMTP_USERNAME'];    */$mail->Username   = "contact@deratech3d.fr";                 //SMTP username
                     $mail->Password   = $_SERVER['SMTP_PASSWORD'];                               //SMTP password
                     $mail->Port       = $_SERVER['SMTP_PORT'];                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
                     $mail->CharSet = 'UTF-8';
