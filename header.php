@@ -51,17 +51,17 @@
                                                 {?>
                                                     <a class="dropdown-item" href="<?= $subContent['url']; ?>.php">
                                                         <?= $subContent['name']; ?>
-                                                    </a>                                            
+                                                    </a>
                                         <?php   }?>
-                                                </ul>   
+                                                </ul>
                                       <?php }
-                                            else 
-                                            {?>        
+                                            else
+                                            {?>
                                                 <a class="nav-link active" aria-current="page" href="<?= $content['url'];?>.php">
                                                     <?= $content['name'];?>
-                                                </a>       
+                                                </a>
                                     <?php   }?>
-                                        </li> 
+                                        </li>
                              <?php }?>
                             </ul>
                         </div>
