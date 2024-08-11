@@ -41,7 +41,7 @@ $mail = new PHPMailer(true);
                     $mail->setLanguage('fr', 'vendor/phpmailer/phpmailer/language');
 
                     //Recipients
-                    $mail->setFrom($_SERVER['SMTP_USERNAME']);
+                    /*$mail->setFrom($_SERVER['SMTP_USERNAME']);*/$mail->setFrom($_POST['mail']);
                     $mail->addAddress($_SERVER['SMTP_USERNAME']);     //Add a recipient
                    
 
