@@ -14,7 +14,7 @@
             crossorigin="anonymous">
         </script>
         <meta name="google-site-verification" content="tScSMpGa_HDp6iTQBWMGEFbVYtaYB2koOljUx366JZA" />
-        <meta name="description" content="Deratech 3d Nous sommes une équipe à votre service pour traiter les nuisibles avec nos produits reconnus et efficaces.">
+        <meta name="description" content="Deratech 3d - Dératisation, Désinsectisation Désinfection">
         <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
