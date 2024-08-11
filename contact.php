@@ -28,12 +28,12 @@ $mail = new PHPMailer(true);
             if (!$errors) {
                 try{
                     //Server settings
-                    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+                    //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
                     $mail->isSMTP();                                            //Send using SMTP
                     $mail->SMTPSecure = 'ssl';
                     $mail->Host       = $_SERVER['SMTP_HOST'];                     //Set the SMTP server to send through
                     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-                    /*$mail->Username   = $_SERVER['SMTP_USERNAME'];    */$mail->Username   = "contact@deratech3d.fr";                 //SMTP username
+                    $mail->Username   = $_SERVER['SMTP_USERNAME'];    /*$mail->Username   = "contact@deratech3d.fr"; */                //SMTP username
                     $mail->Password   = $_SERVER['SMTP_PASSWORD'];                               //SMTP password
                     $mail->Port       = $_SERVER['SMTP_PORT'];                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
                     $mail->CharSet = 'UTF-8';
@@ -41,7 +41,7 @@ $mail = new PHPMailer(true);
                     $mail->setLanguage('fr', 'vendor/phpmailer/phpmailer/language');
 
                     //Recipients
-                    /*$mail->setFrom($_SERVER['SMTP_USERNAME']);*/$mail->setFrom($_POST['mail']);
+                    $mail->setFrom($_SERVER['SMTP_USERNAME']);/*$mail->setFrom($_POST['mail']);*/
                     $mail->addAddress($_SERVER['SMTP_USERNAME']);     //Add a recipient
                    
 
