@@ -140,7 +140,7 @@ $mail = new PHPMailer(true);
                 </div>
 
                 <!-- Submit button -->
-                <input data-mdb-ripple-init="" type="submit" class="btn btn-primary btn-block mb-4 justify-content-center" name="send">
+                <input data-mdb-ripple-init="" type="submit" class="btn btn-primary btn-block mx-auto gap-2 justify-content-center" name="send">
             </form>
         </section> 
     </div>
